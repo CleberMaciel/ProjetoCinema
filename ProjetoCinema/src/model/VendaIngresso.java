@@ -17,4 +17,34 @@ public class VendaIngresso {
         this.secao = secao;
         this.quantidadeAssento = quantidadeAssento;
     }//fim do construtor
+
+    /**
+     * @return the secao
+     */
+    public Secao getSecao() {
+        return secao;
+    }
+
+    /**
+     * @param secao the secao to set
+     */
+    public void setSecao(Secao secao) {
+        this.secao = secao;
+    }
+
+    /**
+     * @return the quantidadeAssento
+     */
+    public int getQuantidadeAssento() {
+        return quantidadeAssento;
+    }
+
+    /**
+     * @param quantidadeAssento the quantidadeAssento to set
+     */
+    public void setQuantidadeAssento(int quantidadeAssento) {
+        this.quantidadeAssento = quantidadeAssento;
+    }
+    
+    
 }

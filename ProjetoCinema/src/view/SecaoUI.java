@@ -54,8 +54,10 @@ public class SecaoUI {
         if(listaSalas.salaExiste(id)){
         Sala sala = listaSalas.buscarSala(id);
         
-        String nomeFilme = Console.scanString("Escolha  o nome do filme");
+        new FilmeUI(listaFilmes).mostarFilmes();
         
+        String nomeFilme = Console.scanString("Escolha  o nome do filme");
+            
         Filme filme = listaFilmes.buscarFilme(nomeFilme);
         
         String hora  = Console.scanString("Digite a hora");
@@ -74,4 +76,15 @@ public class SecaoUI {
             System.out.println(s);
         }
     }
+    
+    public void venderIngresso(){
+        mostrarSecoes();
+        int numSala = Console.scanInt("Informa a seção");
+        listaSecao.buscarSe1
+                cao(numSala);
+        
+                
+        
+    }
+    
 }// fim da classe

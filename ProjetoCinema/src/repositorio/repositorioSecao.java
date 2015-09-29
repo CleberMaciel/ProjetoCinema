@@ -14,19 +14,29 @@ import model.Secao;
  * @author 631420226
  */
 public class repositorioSecao {
+
     private List<Secao> listaSecao;
-    
-    public repositorioSecao(){
+
+    public repositorioSecao() {
         listaSecao = new ArrayList<Secao>();
     }
-    
-    public boolean addSecao(Secao secao){
-        return(listaSecao.add(secao));
+
+    public boolean addSecao(Secao secao) {
+        return (listaSecao.add(secao));
     }
-    
-    public List<Secao> getListaSecao(){
+
+    public List<Secao> getListaSecao() {
         return listaSecao;
     }
-    
-    
+
+    public Secao buscarSecao(int numSala) {
+        for (Secao s : listaSecao) {
+
+            if (s.getSala().getNumeroSala() == numSala) {
+                return s;
+            }
+        }
+        return null;
+    }
+
 }

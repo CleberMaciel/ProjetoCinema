@@ -49,8 +49,8 @@ public class Secao {
     }
     
     public String toString(){
-        return "\nSala: "+sala
-                + "\nFilme:"+filme
+        return "\nInformações Sala:\n "+sala
+                + "\nInformações Filme :\n"+filme
                 + "\nHorario:"+horario;
     }
     

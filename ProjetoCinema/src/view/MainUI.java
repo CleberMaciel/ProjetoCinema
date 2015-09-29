@@ -8,6 +8,7 @@ package view;
 import repositorio.repositorioFilme;
 import repositorio.repositorioSala;
 import repositorio.repositorioSecao;
+import repositorio.repositorioVendaIngresso;
 import util.Console;
 import view.menu.MainMenu;
 
@@ -20,11 +21,13 @@ public class MainUI {
     private repositorioFilme listaFilmes;
     private repositorioSala listaSalas;
     private repositorioSecao listaSecao;
+    private repositorioVendaIngresso listaIngresso;
 
     public MainUI() {
         listaFilmes = new repositorioFilme();
         listaSalas = new repositorioSala();
         listaSecao = new repositorioSecao();
+        listaIngresso = new repositorioVendaIngresso();
         
 
     }
@@ -42,7 +45,10 @@ public class MainUI {
                     new SalaUI(listaSalas).executar();
                    break;
                 case MainMenu.OP_SECAO: new SecaoUI(listaSalas, listaFilmes, listaSecao, null).executar();
-                    
+                    break;
+                case MainMenu.OP_VENDER:
+                    new VendaIngressoUI(listaIngresso, listaSecao).executar();
+                    break;
             }
         } while (opcao != MainMenu.OP_SAIR);
 

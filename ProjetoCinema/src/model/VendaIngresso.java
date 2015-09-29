@@ -16,5 +16,5 @@ public class VendaIngresso {
     public VendaIngresso(Secao secao, int quantidadeAssento){
         this.secao = secao;
         this.quantidadeAssento = quantidadeAssento;
-    }
+    }//fim do construtor
 }

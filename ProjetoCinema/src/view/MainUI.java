@@ -7,7 +7,7 @@ package view;
 
 import java.text.ParseException;
 import repositorio.repositorioFilme;
-import repositorio.repositorioHora;
+
 import repositorio.repositorioSala;
 import repositorio.repositorioSecao;
 import repositorio.repositorioVendaIngresso;
@@ -24,13 +24,13 @@ public class MainUI {
     private repositorioSala listaSalas;
     private repositorioSecao listaSecao;
     private repositorioVendaIngresso listaIngresso;
-    private repositorioHora listahora;
+
     public MainUI() {
         listaFilmes = new repositorioFilme();
         listaSalas = new repositorioSala();
         listaSecao = new repositorioSecao();
         listaIngresso = new repositorioVendaIngresso();
-        listahora = new repositorioHora();
+
         
 
     }
@@ -47,12 +47,12 @@ public class MainUI {
                 case MainMenu.OP_SALAS:
                     new SalaUI(listaSalas).executar();
                    break;
-                case MainMenu.OP_SECAO: new SecaoUI(listaSalas, listaFilmes, listaSecao, null).executar();
+                case MainMenu.OP_SECAO: new SecaoUI(listaSalas, listaFilmes, listaSecao).executar();
                     break;
                 case MainMenu.OP_VENDER:
-                    new VendaIngressoUI(listaIngresso, listaSecao, listahora, listaSalas);
+                   new VendaIngressoUI(listaIngresso, listaSecao, listaSalas).executar();
                     break;
-                case MainMenu.OP_HORA: new HoraUI(listahora).executar();
+                
             }
         } while (opcao != MainMenu.OP_SAIR);
 

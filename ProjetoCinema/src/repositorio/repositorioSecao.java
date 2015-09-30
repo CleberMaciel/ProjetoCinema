@@ -29,12 +29,11 @@ public class repositorioSecao {
         return listaSecao;
     }
 
-    public Secao buscarSecao(int numSala) {
+    public Secao buscarSecaoExistente(int cod) {
         for (Secao s : listaSecao) {
-
-            if (s.getSala().getNumeroSala() == numSala) {
-                return s;
+            if (s.getCod() == cod) {
             }
+            return s;
         }
         return null;
     }

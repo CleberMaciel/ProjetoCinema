@@ -8,11 +8,11 @@ package view;
 import java.text.ParseException;
 import java.util.Date;
 import model.Filme;
-import model.Hora;
+
 import model.Sala;
 import model.Secao;
 import repositorio.repositorioFilme;
-import repositorio.repositorioHora;
+
 import repositorio.repositorioSala;
 import repositorio.repositorioSecao;
 import util.Console;
@@ -27,13 +27,13 @@ public class SecaoUI {
     private repositorioSala listaSalas;
     private repositorioFilme listaFilmes;
     private repositorioSecao listaSecao;
-    private repositorioHora listaHora;
     
-    public SecaoUI(repositorioSala listaSala, repositorioFilme listaFilme,repositorioSecao listaSecao, repositorioHora listaHora){
+    
+    public SecaoUI(repositorioSala listaSala, repositorioFilme listaFilme,repositorioSecao listaSecao){
         this.listaSalas = listaSala;
         this.listaFilmes = listaFilme;
         this.listaSecao = listaSecao;
-        this.listaHora = listaHora;
+       
     }
     
     public void executar() throws ParseException{
@@ -64,16 +64,15 @@ public class SecaoUI {
         String nomeFilme = Console.scanString("Escolha  o nome do filme");
             
         Filme filme = listaFilmes.buscarFilme(nomeFilme);
-       
-        new HoraUI(listaHora).mostrarHoras();
-        
+
         String horaBusca = Console.scanString("Informe um horario: ");
         Date horario;
         
         horario = DateUtil.stringToHour(horaBusca);
-        Hora hora = listaHora.buscarHora(horario);
+        
+        int cod = Console.scanInt("Informe o codigo da secao: ");
        
-        Secao secao = new Secao(sala, hora, filme);
+        Secao secao = new Secao(cod,sala, horario, filme);
                 
         listaSecao.addSecao(secao);
         }else{
@@ -91,10 +90,9 @@ public class SecaoUI {
     public void venderIngresso(){
         mostrarSecoes();
         int numSala = Console.scanInt("Informa a seção");
-      
-        
-                
-        
+    
     }
+    
+ 
     
 }// fim da classe

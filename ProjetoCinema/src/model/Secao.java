@@ -13,12 +13,13 @@ import java.util.Date;
  * @version 1.0
  */
 public class Secao {
-    
+    private int cod;
     private Sala sala;
-    private Hora horario;
+    private Date horario;
     private Filme filme;
 
-    public Secao(Sala sala, Hora horario, Filme filme) {
+    public Secao(int cod,Sala sala, Date horario, Filme filme) {
+        this.cod  =cod;
         this.sala = sala;
         this.horario = horario;
         this.filme = filme;
@@ -32,11 +33,11 @@ public class Secao {
         this.sala = sala;
     }
 
-    public Hora getHorario() {
+    public Date getHorario() {
         return horario;
     }
 
-    public void setHorario(Hora horario) {
+    public void setHorario(Date horario) {
         this.horario = horario;
     }
 
@@ -49,9 +50,24 @@ public class Secao {
     }
     
     public String toString(){
-        return "\nInformações Sala:\n "+sala
+        return "ID DA SESSAO: "+getCod()
+                + "\nInformações Sala:\n "+sala
                 + "\nInformações Filme :\n"+filme
                 + "\nHorario:"+horario;
+    }
+
+    /**
+     * @return the cod
+     */
+    public int getCod() {
+        return cod;
+    }
+
+    /**
+     * @param cod the cod to set
+     */
+    public void setCod(int cod) {
+        this.cod = cod;
     }
     
     

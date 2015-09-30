@@ -46,6 +46,10 @@ public class Sala {
         this.quantidadeAssento = quantidadeAssento;
     }
     
+    public int CalculoAssento(){
+        return quantidadeAssento = quantidadeAssento -1;
+    }
+    
     public String toString(){
         return "\nNúmero da sala: "+numeroSala
                 + "\nQuantidade de assento: "+quantidadeAssento;

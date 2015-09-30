@@ -36,10 +36,14 @@ public class MainUI {
     }
 
     public void executar() throws ParseException {
+        try {
+            
+        
         int opcao = 0;
+      
         do {
             System.out.println(MainMenu.getOpcoes());
-            opcao = Console.scanInt("Digite sua opção");
+            opcao = Console.scanInt("Digite sua opção: ");
             switch (opcao) {
                 case MainMenu.OP_FILMES:
                     new FilmeUI(listaFilmes).executar();
@@ -55,6 +59,10 @@ public class MainUI {
                 
             }
         } while (opcao != MainMenu.OP_SAIR);
-
+      } catch (Exception e) {
+            System.out.println("erro");
+            System.out.println("Digite uma opção valida: ");
+            executar();
+      }
     }
 }

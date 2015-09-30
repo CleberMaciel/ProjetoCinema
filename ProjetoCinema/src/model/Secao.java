@@ -49,6 +49,16 @@ public class Secao {
         this.filme = filme;
     }
     
+
+    public int getCod() {
+        return cod;
+    }
+
+ 
+    public void setCod(int cod) {
+        this.cod = cod;
+    }
+    
     public String toString(){
         return "ID DA SESSAO: "+getCod()
                 + "\nInformações Sala:\n "+sala
@@ -56,19 +66,7 @@ public class Secao {
                 + "\nHorario:"+horario;
     }
 
-    /**
-     * @return the cod
-     */
-    public int getCod() {
-        return cod;
-    }
 
-    /**
-     * @param cod the cod to set
-     */
-    public void setCod(int cod) {
-        this.cod = cod;
-    }
     
     
 }

@@ -25,7 +25,7 @@ public class SalaUI {
     public void cadastrarSala(){
         int cod = Console.scanInt("Codigo: ");
         int numeroSala  = Console.scanInt("Numero da Sala: ");
-        int quantidadeAssento = Console.scanInt("Quantidades de Assento");
+        int quantidadeAssento = Console.scanInt("Quantidades de Assento: ");
     
         lista.addSalas(new Sala(cod, numeroSala, quantidadeAssento));
     }
@@ -40,7 +40,7 @@ public class SalaUI {
     int op = 0;
         do{
             System.out.println(SalaMenu.Opcoes());
-            op = Console.scanInt("Digite sua opção:");
+            op = Console.scanInt("Digite sua opção: ");
             switch(op){
                 case SalaMenu.OP_CADASTRAR: cadastrarSala();
                     break;

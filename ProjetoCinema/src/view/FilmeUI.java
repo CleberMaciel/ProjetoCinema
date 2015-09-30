@@ -27,7 +27,7 @@ public class FilmeUI {
         int op = 0;
         do {            
             System.out.println(FilmeMenu.Opcoes());
-            op = Console.scanInt("Digite sua opção:");
+            op = Console.scanInt("Digite sua opção: ");
             switch(op){
                 case FilmeMenu.OP_CADASTRAR:
                     cadastrarFilme();

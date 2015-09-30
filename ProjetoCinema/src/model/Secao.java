@@ -60,9 +60,10 @@ public class Secao {
     }
     
     public String toString(){
-        return "ID DA SESSAO: "+getCod()
-                + "\nInformações Sala:\n "+sala
-                + "\nInformações Filme :\n"+filme
+        return "Informações sobre Seção:"
+                + "\nID DA SESSAO: "+getCod()
+                + "\nNumero da Sala: "+sala.getNumeroSala()
+                + "\nNome do Filme: "+filme.getFilmeNome()
                 + "\nHorario:"+horario;
     }
 

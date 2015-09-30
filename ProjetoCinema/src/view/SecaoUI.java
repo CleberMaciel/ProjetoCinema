@@ -80,8 +80,7 @@ public class SecaoUI {
     public void venderIngresso(){
         mostrarSecoes();
         int numSala = Console.scanInt("Informa a seção");
-        listaSecao.buscarSe1
-                cao(numSala);
+      
         
                 
         

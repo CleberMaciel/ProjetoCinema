@@ -11,17 +11,20 @@ package model;
  * @version 1.0
  */
 public class Sala {
-    
+    private static int CODIGO_GERADO = 1;
     private int codigo;
     private int numeroSala;
     private int quantidadeAssento;
 
-    public Sala(int codigo, int numeroSala, int quantidadeAssento) {
-        this.codigo = codigo;
+    public Sala(int numeroSala, int quantidadeAssento) {
+        this.codigo = generateCodigo();
         this.numeroSala = numeroSala;
         this.quantidadeAssento = quantidadeAssento;
     }
-
+     private int generateCodigo(){
+        return(CODIGO_GERADO++);
+    } 
+     
     public int getCodigo() {
         return codigo;
     }

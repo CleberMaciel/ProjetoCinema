@@ -45,6 +45,11 @@ public class VendaIngresso {
     public void setQuantidadeAssento(int quantidadeAssento) {
         this.quantidadeAssento = quantidadeAssento;
     }
-    
+     
+   public String toString(){
+       return "\nNome Filme: "+secao.getFilme().getFilmeNome()
+               +"\nHorario da Seção: "+secao.getHorario()
+               +"\nSala: "+secao.getSala().getNumeroSala();
+   }
     
 }

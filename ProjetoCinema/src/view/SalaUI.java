@@ -23,11 +23,11 @@ public class SalaUI {
     }
     
     public void cadastrarSala(){
-        int cod = Console.scanInt("Codigo: ");
+       
         int numeroSala  = Console.scanInt("Numero da Sala: ");
         int quantidadeAssento = Console.scanInt("Quantidades de Assento: ");
     
-        lista.addSalas(new Sala(cod, numeroSala, quantidadeAssento));
+        lista.addSalas(new Sala(numeroSala, quantidadeAssento));
     }
     
     public void mostrarSalas(){

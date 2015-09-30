@@ -11,15 +11,15 @@ package model;
  * @version 1.0
  */
 public class Filme {
-    
+    private static int CODIGO_GERADO = 1;
     private int codigo;
     private String filmeNome;
     private String filmeGenero;
     private String filmeSinopse;
 
-    public Filme(int codigo, String filmeNome, String filmeGenero,
+    public Filme(String filmeNome, String filmeGenero,
             String filmeSinopse) {
-        this.codigo = codigo;
+        this.codigo = generateCodigo();
         this.filmeNome = filmeNome;
         this.filmeGenero = filmeGenero;
         this.filmeSinopse = filmeSinopse;
@@ -57,8 +57,12 @@ public class Filme {
         this.filmeSinopse = filmeSinopse;
     }
     
+     private int generateCodigo(){
+        return(CODIGO_GERADO++);
+    } 
+    
     public String toString(){
-        return "\nCódigo: "+codigo
+        return "\n#Código: "+codigo
                 + "\nNome do Video: "+filmeNome
                 + "\nGenero: "+filmeGenero
                 + "\nSinopse: "+filmeSinopse;

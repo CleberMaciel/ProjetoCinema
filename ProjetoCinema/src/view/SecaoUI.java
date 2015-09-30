@@ -55,7 +55,7 @@ public class SecaoUI {
         System.out.println("Defina  a Sala:");
         new SalaUI(listaSalas).mostrarSalas();
        
-        int id = Console.scanInt("Escolha o id da sala: ");
+        int id = Console.scanInt("Informa o numero da sala: ");
         if(listaSalas.salaExiste(id)){
         Sala sala = listaSalas.buscarSala(id);
         
@@ -64,26 +64,27 @@ public class SecaoUI {
         String nomeFilme = Console.scanString("Escolha  o nome do filme: ");
             
         Filme filme = listaFilmes.buscarFilme(nomeFilme);
-
+        
         String horaBusca = Console.scanString("Informe um horario: ");
         Date horario;
         
         horario = DateUtil.stringToHour(horaBusca);
-        
-        int cod = Console.scanInt("Informe o codigo da secao: ");
-       
-        Secao secao = new Secao(cod,sala, horario, filme);
+               
+        Secao secao = new Secao(sala, horario, filme);
                 
         listaSecao.addSecao(secao);
         }else{
-            System.out.println("Nao existe a sala arigo");
+            System.out.println("Não existe Sala");
         }
                 
     }
     
     public void mostrarSecoes(){
+        System.out.println("###Seções###");
         for(Secao s: listaSecao.getListaSecao()){
+            System.out.println("##################");
             System.out.println(s);
+            System.out.println("##################");
         }
     }
     

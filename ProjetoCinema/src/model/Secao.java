@@ -13,17 +13,22 @@ import java.util.Date;
  * @version 1.0
  */
 public class Secao {
+   private static int CODIGO_GERADO = 1;
     private int cod;
     private Sala sala;
     private Date horario;
     private Filme filme;
 
-    public Secao(int cod,Sala sala, Date horario, Filme filme) {
-        this.cod  =cod;
+    public Secao(Sala sala, Date horario, Filme filme) {
+        this.cod  = generateCodigo();
         this.sala = sala;
         this.horario = horario;
         this.filme = filme;
     }
+    
+     private int generateCodigo(){
+        return(CODIGO_GERADO++);
+    } 
 
     public Sala getSala() {
         return sala;
@@ -60,11 +65,12 @@ public class Secao {
     }
     
     public String toString(){
-        return "Informações sobre Seção:"
-                + "\nID DA SESSAO: "+getCod()
+        return 
+                 "\nCódigo da seção: : "+getCod()
                 + "\nNumero da Sala: "+sala.getNumeroSala()
                 + "\nNome do Filme: "+filme.getFilmeNome()
-                + "\nHorario:"+horario;
+                + "\nHorario:"+horario
+                + "\nQuantidade de assento disponiveis: "+sala.getQuantidadeAssento();
     }
 
 

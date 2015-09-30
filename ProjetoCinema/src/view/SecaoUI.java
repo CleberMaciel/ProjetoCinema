@@ -5,13 +5,18 @@
  */
 package view;
 
+import java.text.ParseException;
+import java.util.Date;
 import model.Filme;
+import model.Hora;
 import model.Sala;
 import model.Secao;
 import repositorio.repositorioFilme;
+import repositorio.repositorioHora;
 import repositorio.repositorioSala;
 import repositorio.repositorioSecao;
 import util.Console;
+import util.DateUtil;
 import view.menu.SecaoMenu;
 
 /**
@@ -22,16 +27,16 @@ public class SecaoUI {
     private repositorioSala listaSalas;
     private repositorioFilme listaFilmes;
     private repositorioSecao listaSecao;
-    private String hora;
+    private repositorioHora listaHora;
     
-    public SecaoUI(repositorioSala listaSala, repositorioFilme listaFilme,repositorioSecao listaSecao, String hora){
+    public SecaoUI(repositorioSala listaSala, repositorioFilme listaFilme,repositorioSecao listaSecao, repositorioHora listaHora){
         this.listaSalas = listaSala;
         this.listaFilmes = listaFilme;
         this.listaSecao = listaSecao;
-        this.hora = hora;
+        this.listaHora = listaHora;
     }
     
-    public void executar(){
+    public void executar() throws ParseException{
         int op = 0;
         do{
             System.out.println(SecaoMenu.getOpcoes());
@@ -46,7 +51,7 @@ public class SecaoUI {
         }while(op != SecaoMenu.OP_VOLTAR);
     }
     
-    private void cadastrarSecao(){
+    private void cadastrarSecao() throws ParseException{
         System.out.println("Defina  a Sala:");
         new SalaUI(listaSalas).mostrarSalas();
        
@@ -59,9 +64,15 @@ public class SecaoUI {
         String nomeFilme = Console.scanString("Escolha  o nome do filme");
             
         Filme filme = listaFilmes.buscarFilme(nomeFilme);
+       
+        new HoraUI(listaHora).mostrarHoras();
         
-        String hora  = Console.scanString("Digite a hora");
+        String horaBusca = Console.scanString("Informe um horario: ");
+        Date horario;
         
+        horario = DateUtil.stringToHour(horaBusca);
+        Hora hora = listaHora.buscarHora(horario);
+       
         Secao secao = new Secao(sala, hora, filme);
                 
         listaSecao.addSecao(secao);

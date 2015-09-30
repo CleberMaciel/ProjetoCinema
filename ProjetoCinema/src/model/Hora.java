@@ -13,6 +13,21 @@ import java.util.Date;
  */
 public class Hora {
     private Date hora;
+
+    public Hora(Date hora) {
+        this.hora = hora;
+    }
+
+    public Date getHora() {
+        return hora;
+    }
+
+    public void setHora(Date hora) {
+        this.hora = hora;
+    }
     
+    public String toString(){
+        return "Hora: "+hora;
+    }
     
 }

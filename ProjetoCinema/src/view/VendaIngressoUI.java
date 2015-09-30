@@ -6,6 +6,8 @@
 package view;
 
 import model.VendaIngresso;
+import repositorio.repositorioHora;
+import repositorio.repositorioSala;
 import repositorio.repositorioSecao;
 import repositorio.repositorioVendaIngresso;
 import util.Console;
@@ -18,9 +20,14 @@ import view.menu.VendaIngressoMenu;
 public class VendaIngressoUI {
     private repositorioVendaIngresso lista;
     private repositorioSecao listaSecao;
-    public VendaIngressoUI(repositorioVendaIngresso lista, repositorioSecao listaSecao){
+    private repositorioSala listaSala;
+    private repositorioHora listaHora;
+    
+    public VendaIngressoUI(repositorioVendaIngresso lista, repositorioSecao listaSecao,repositorioHora listaHora, repositorioSala listaSala){
         this.lista = lista;
         this.listaSecao = listaSecao;
+        this.listaHora = listaHora;
+        this.listaSala = listaSala;
     }
     
     public void executar(){
@@ -45,7 +52,7 @@ public class VendaIngressoUI {
     
     public void cadastrarVendaIngresso(){
         System.out.println("Escolha uma seção:");
-        new SecaoUI(null, null, listaSecao, null).mostrarSecoes();
+        new SecaoUI(listaSala, null, listaSecao, listaHora);
         
     }
     

@@ -15,10 +15,10 @@ import java.util.Date;
 public class Secao {
     
     private Sala sala;
-    private String horario;
+    private Hora horario;
     private Filme filme;
 
-    public Secao(Sala sala, String horario, Filme filme) {
+    public Secao(Sala sala, Hora horario, Filme filme) {
         this.sala = sala;
         this.horario = horario;
         this.filme = filme;
@@ -32,11 +32,11 @@ public class Secao {
         this.sala = sala;
     }
 
-    public String getHorario() {
+    public Hora getHorario() {
         return horario;
     }
 
-    public void setHorario(String horario) {
+    public void setHorario(Hora horario) {
         this.horario = horario;
     }
 

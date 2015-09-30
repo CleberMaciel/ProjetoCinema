@@ -5,6 +5,7 @@
  */
 package projetocinema;
 
+import java.text.ParseException;
 import view.MainUI;
 
 
@@ -18,7 +19,7 @@ public class ProjetoCinema {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         // TODO code application logic here
         new MainUI().executar();
     }

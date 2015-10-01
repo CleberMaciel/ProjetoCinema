@@ -49,7 +49,7 @@ public class Sala {
         this.quantidadeAssento = quantidadeAssento;
     }
     
-    public int CalculoAssento(){
+    public int calcularAssento(){
         return quantidadeAssento = quantidadeAssento -1;
     }
     

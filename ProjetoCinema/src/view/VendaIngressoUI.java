@@ -39,7 +39,7 @@ public class VendaIngressoUI {
             op = Console.scanInt("Digite sua Opção: ");
             switch (op) {
                 case VendaIngressoMenu.OP_VENDER:
-                    RealizarVenda();
+                    realizarVenda();
                     break;
                 case VendaIngressoMenu.OP_LISTAR:
                     mostrarListaIngressos();
@@ -52,7 +52,7 @@ public class VendaIngressoUI {
 
     }//fim do metodo executar
 
-    public void RealizarVenda() {
+    public void realizarVenda() {
         System.out.println("Escolha uma seção: ");
         new SecaoUI(listaSala, null, listaSecao).mostrarSecoes();
 
@@ -64,7 +64,7 @@ public class VendaIngressoUI {
             executar();
         } else {
 
-            int qtd2 = secao.getSala().CalculoAssento();
+            int qtd2 = secao.getSala().calcularAssento();
             VendaIngresso vi = new VendaIngresso(secao, qtd2);
 
             lista.addIngresso(vi);

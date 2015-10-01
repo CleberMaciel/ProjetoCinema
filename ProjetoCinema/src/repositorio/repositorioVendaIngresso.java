@@ -11,7 +11,7 @@ import model.VendaIngresso;
 
 /**
  *
- * @author Cleber Jr
+ * @author Cleber Maciel e Matheus Souza
  */
 public class repositorioVendaIngresso {
     

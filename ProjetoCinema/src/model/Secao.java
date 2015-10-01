@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author Cleber Maciel
+ * @author Cleber Maciel e Matheus Souza
  * @version 1.0
  */
 public class Secao {

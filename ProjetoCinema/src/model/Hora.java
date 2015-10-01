@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author 631420226
+ * @author Cleber Maciel e Matheus Souza
  */
 public class Hora {
     private Date hora;

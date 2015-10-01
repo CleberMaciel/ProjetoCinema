@@ -12,7 +12,7 @@ import view.menu.SalaMenu;
 
 /**
  *
- * @author Cleber Jr
+ * @author Cleber Maciel e Matheus Souza
  */
 public class SalaUI {
 

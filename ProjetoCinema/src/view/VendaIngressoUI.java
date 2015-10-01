@@ -17,7 +17,7 @@ import view.menu.VendaIngressoMenu;
 
 /**
  *
- * @author Cleber Jr
+ * @author Cleber Maciel e Matheus Souza
  */
 public class VendaIngressoUI {
 

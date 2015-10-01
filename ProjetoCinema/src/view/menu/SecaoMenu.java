@@ -7,7 +7,7 @@ package view.menu;
 
 /**
  *
- * @author 631420226
+ * @author Cleber Maciel e Matheus Souza
  */
 public class SecaoMenu {
     public static final int OP_CADASTRAR = 1;

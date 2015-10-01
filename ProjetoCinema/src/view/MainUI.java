@@ -16,7 +16,7 @@ import view.menu.MainMenu;
 
 /**
  *
- * @author Cleber Jr
+ * @author Cleber Maciel e Matheus Souza
  */
 public class MainUI {
 

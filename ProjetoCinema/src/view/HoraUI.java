@@ -16,7 +16,7 @@ import view.menu.HoraMenu;
 
 /**
  *
- * @author 631420226
+ * @author Cleber Maciel e Matheus Souza
  */
 public class HoraUI {
 

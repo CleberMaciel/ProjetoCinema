@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author Cleber Jr
+ * @author Cleber Maciel e Matheus Souza
  */
 public class VendaIngresso {
     private Secao secao;

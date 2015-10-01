@@ -21,7 +21,7 @@ import view.menu.SecaoMenu;
 
 /**
  *
- * @author 631420226
+ * @author Cleber Maciel e Matheus Souza
  */
 public class SecaoUI {
     private repositorioSala listaSalas;

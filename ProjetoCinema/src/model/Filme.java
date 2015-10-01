@@ -7,7 +7,7 @@ package model;
 
 /**
  *
- * @author Cleber Maciel
+ * @author Cleber Maciel Matheus Souza
  * @version 1.0
  */
 public class Filme {
